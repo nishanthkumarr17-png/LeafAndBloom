@@ -1,0 +1,99 @@
+PLANTNEST PROJECT SYNOPSIS
+
+1. TITLE OF THE PROJECT
+PlantNest: An Online Plant Store and Community Platform for Plant Lovers
+
+2. INTRODUCTION
+PlantNest is a web-based platform developed to help users discover, purchase, and learn to care for indoor and ornamental plants in a simple and engaging way. The project combines an online plant store, wishlist management, beginner care guidance, order tracking, and a community space where plant lovers can share their experiences and connect with one another. PlantNest is designed to make plant shopping more informative, interactive, and beginner friendly.
+
+3. PROBLEM STATEMENT
+Many people want to keep plants at home, but they often face difficulties in selecting suitable plants, understanding care requirements, and finding a reliable platform that offers both products and guidance. Most online shopping platforms focus only on selling plants and do not provide a complete experience that includes beginner support, plant care education, and community interaction. This creates confusion and reduces confidence among first-time buyers.
+
+4. OBJECTIVES
+The main objectives of PlantNest are:
+- To provide an online platform for browsing and purchasing a variety of plants.
+- To allow users to save favorite plants in a wishlist for future purchase.
+- To help users place and track plant orders easily.
+- To guide beginners with simple maintenance tips and plant care suggestions.
+- To create a community page where plant lovers can share their plant journey, experiences, and joy.
+- To deliver a responsive and visually appealing user interface for both desktop and mobile users.
+
+5. SCOPE OF THE PROJECT
+The scope of PlantNest includes product browsing, filtering, sorting, wishlist management, checkout, order tracking, beginner plant care guidance, and a community feature for user interaction. The project is focused on creating an easy-to-use and attractive experience for plant buyers and enthusiasts. It can be further extended into a larger e-commerce and social platform in future versions.
+
+6. EXISTING SYSTEM
+In the existing system, many online stores only provide product listings and payment options. Users usually have to search other websites or social media pages to understand plant care instructions or to communicate with fellow plant lovers. This separation of shopping, learning, and interaction makes the overall process inconvenient.
+
+7. PROPOSED SYSTEM
+The proposed system, PlantNest, integrates plant shopping, care guidance, and community interaction into one platform. Users can view plant categories, filter by size, light, and price, sort items as needed, add plants to a wishlist, place orders, and get basic beginner-friendly care guidance. The community feature allows users to share plant updates and connect with others who enjoy growing plants.
+
+8. MODULES OF THE PROJECT
+The major modules of PlantNest are:
+
+8.1 Plant Catalog Module
+Displays a variety of plants with details such as name, category, light requirement, size, price, and description.
+
+8.2 Search, Filter, and Sort Module
+Allows users to search plants by name or category and filter them by size, light requirement, and price range. Sorting options help users browse plants more efficiently.
+
+8.3 Wishlist Module
+Enables users to save favorite plants for future purchase and manage their saved collection.
+
+8.4 Checkout and Order Module
+Allows users to enter delivery details, select payment methods, place orders, and view order history.
+
+8.5 Plant Care Guide Module
+Provides beginner-friendly guidance on watering, lighting, common plant problems, and simple maintenance practices.
+
+8.6 Community Module
+Offers a dedicated space where plant lovers can post updates, share their plant journey, and interact through a simple feed.
+
+8.7 Authentication Module
+Provides basic sign-up and sign-in functionality for personalized usage.
+
+9. TECHNOLOGIES USED
+Frontend:
+- React.js
+- React Router
+- CSS
+- React Icons
+
+Backend:
+- Node.js
+- Express.js
+
+Database:
+- MongoDB
+- Mongoose
+
+Other Tools:
+- Axios
+- Vite
+
+10. SYSTEM WORKING
+The user opens the PlantNest application and browses the available plants. Using search, filters, and sorting options, the user can quickly find suitable plants. The user can add plants to the wishlist or buy them directly through the checkout page. The order is then stored and displayed in the orders section. Users can also access the plant care guide to understand basic maintenance steps. In addition, users can visit the community page to share updates and interact with other plant lovers.
+
+11. ADVANTAGES OF THE PROJECT
+- User friendly and visually engaging interface.
+- Combines shopping, learning, and community interaction in one platform.
+- Beginner-friendly guidance for plant maintenance.
+- Organized browsing with filters and sorting features.
+- Encourages engagement and emotional connection through the community space.
+
+12. LIMITATIONS
+- The current authentication system is basic and can be improved.
+- The community feature currently uses lightweight local storage behavior and can be extended with shared database support.
+- Online payment gateway integration is not fully implemented.
+- Admin management features are not included in the current version.
+
+13. FUTURE ENHANCEMENTS
+- Add secure user authentication and authorization.
+- Implement real-time community chat and commenting.
+- Add admin dashboard for managing plants, users, and orders.
+- Integrate online payment gateways.
+- Add image upload support for community posts.
+- Add recommendation features based on plant care level and user interest.
+- Enable shared community posts using backend database storage.
+
+14. CONCLUSION
+PlantNest is a practical and modern web application that goes beyond a normal plant store by creating a complete ecosystem for plant lovers. It combines e-commerce, education, and community engagement in one platform. The project is especially useful for beginners who need support in selecting and maintaining plants, while also providing an enjoyable space for experienced plant enthusiasts to share their journey. PlantNest demonstrates how technology can be used to build a meaningful, user-centered digital experience.

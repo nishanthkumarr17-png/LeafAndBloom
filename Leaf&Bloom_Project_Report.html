@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Leaf &amp; Bloom Project Report</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 1in;
+    }
+
+    body {
+      font-family: "Times New Roman", serif;
+      font-size: 12pt;
+      line-height: 1.5;
+      color: #111;
+    }
+
+    h1, h2, h3, h4 {
+      text-align: center;
+      margin: 0.4em 0;
+    }
+
+    h1 { font-size: 22pt; }
+    h2 { font-size: 18pt; }
+    h3 { font-size: 15pt; }
+    h4 { font-size: 13pt; }
+
+    p {
+      text-align: justify;
+      margin: 0.5em 0;
+    }
+
+    .page-break {
+      page-break-after: always;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .spacer-lg {
+      height: 64px;
+    }
+
+    .spacer-md {
+      height: 32px;
+    }
+
+    .signature-row {
+      margin-top: 60px;
+      display: table;
+      width: 100%;
+    }
+
+    .signature-cell {
+      display: table-cell;
+      width: 50%;
+      vertical-align: bottom;
+      text-align: center;
+    }
+
+    .toc p,
+    .list-item {
+      text-align: left;
+      margin: 0.35em 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1em 0;
+    }
+
+    th,
+    td {
+      border: 1px solid #222;
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    ul {
+      margin: 0.5em 0 0.5em 1.2em;
+    }
+
+    li {
+      margin: 0.25em 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="center">
+    <div class="spacer-lg"></div>
+    <h2>PROJECT REPORT</h2>
+    <div class="spacer-md"></div>
+    <p class="center">ON</p>
+    <h1>LEAF &amp; BLOOM</h1>
+    <p class="center">An Online Plant Store with Community, Care Guidance, and Plant Assistant</p>
+    <div class="spacer-lg"></div>
+    <p class="center">Submitted in partial fulfillment of the requirements for the award of the degree of</p>
+    <h3>Bachelor of Technology</h3>
+    <p class="center">in</p>
+    <h3>Computer Science and Engineering</h3>
+    <div class="spacer-lg"></div>
+    <p class="center"><strong>Submitted by</strong></p>
+    <p class="center">Name: ____________________________</p>
+    <p class="center">Roll No: __________________________</p>
+    <div class="spacer-lg"></div>
+    <p class="center"><strong>Under the Guidance of</strong></p>
+    <p class="center">Guide Name: ________________________</p>
+    <div class="spacer-lg"></div>
+    <p class="center">Department of Computer Science and Engineering</p>
+    <p class="center">College Name: ________________________</p>
+    <p class="center">Academic Year: 2025 - 2026</p>
+  </div>
+
+  <div class="page-break"></div>
+
+  <h2>CERTIFICATE</h2>
+  <p>
+    This is to certify that the project report entitled <strong>"Leaf &amp; Bloom"</strong> is a bonafide work carried out by
+    <strong>____________________________</strong> bearing Roll No. <strong>__________________</strong> in partial fulfillment of the
+    requirements for the award of the degree of Bachelor of Technology in Computer Science and Engineering.
+    The work embodied in this report has been carried out under my supervision during the academic year 2025 - 2026.
+  </p>
+
+  <div class="signature-row">
+    <div class="signature-cell">
+      <p>Project Guide</p>
+      <p>______________________</p>
+    </div>
+    <div class="signature-cell">
+      <p>Head of Department</p>
+      <p>______________________</p>
+    </div>
+  </div>
+
+  <div class="signature-row">
+    <div class="signature-cell">
+      <p>Internal Examiner</p>
+      <p>______________________</p>
+    </div>
+    <div class="signature-cell">
+      <p>External Examiner</p>
+      <p>______________________</p>
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <h2>DECLARATION</h2>
+  <p>
+    I hereby declare that the project report entitled <strong>"Leaf &amp; Bloom"</strong> submitted by me to the Department of
+    Computer Science and Engineering is an original work carried out by me under the guidance of
+    <strong>______________________</strong>. This report has not been submitted earlier to any other institution or university
+    for the award of any degree or diploma.
+  </p>
+
+  <div class="signature-row">
+    <div class="signature-cell"></div>
+    <div class="signature-cell">
+      <p>Signature of the Student</p>
+      <p>______________________</p>
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <h2>ACKNOWLEDGEMENT</h2>
+  <p>
+    I express my sincere gratitude to my project guide, faculty members, and the Department of Computer Science and
+    Engineering for their continuous support, motivation, and encouragement throughout the development of this project.
+    I also thank my friends and family for their valuable suggestions and moral support during every phase of the work.
+  </p>
+  <p>
+    This project helped me strengthen both my technical understanding and my confidence in building a complete web
+    application that combines e-commerce, community interaction, and practical plant care assistance.
+  </p>
+
+  <div class="page-break"></div>
+
+  <h2>ABSTRACT</h2>
+  <p>
+    Leaf &amp; Bloom is a modern web-based plant shopping platform designed to make plant discovery, care guidance,
+    and community participation simple and engaging. Traditional online shopping platforms often focus only on product
+    listing and order placement, but plant buyers usually need more support, especially beginners who may not know how
+    to care for different plant types. This project addresses that gap by combining a plant catalog, personalized plant
+    guidance, a beginner care guide, wishlist management, order handling, user authentication, and a community space
+    where plant lovers can share their journey and experiences.
+  </p>
+  <p>
+    The frontend of the system is developed using React and Vite to provide a fast and responsive user experience,
+    while the backend uses Node.js, Express.js, and MongoDB to manage order data and wishlist-related information.
+    The system includes category browsing, room-based discovery, plant detail pages, reviews, chatbot-style assistance,
+    community posts with images, and structured plant care information. Leaf &amp; Bloom is designed not only as an
+    e-commerce solution but also as a friendly digital companion for plant lovers.
+  </p>
+
+  <div class="page-break"></div>
+
+  <h2>TABLE OF CONTENTS</h2>
+  <div class="toc">
+    <p>1. Introduction</p>
+    <p>2. Problem Statement</p>
+    <p>3. Objectives</p>
+    <p>4. Existing System</p>
+    <p>5. Proposed System</p>
+    <p>6. System Requirements</p>
+    <p>7. System Design and Architecture</p>
+    <p>8. Modules Description</p>
+    <p>9. Database Design</p>
+    <p>10. Testing and Validation</p>
+    <p>11. Advantages of the System</p>
+    <p>12. Applications</p>
+    <p>13. Future Scope</p>
+    <p>14. Conclusion</p>
+    <p>15. References</p>
+  </div>
+
+  <div class="page-break"></div>
+
+  <h2>1. INTRODUCTION</h2>
+  <p>
+    Indoor plants have become an important part of modern lifestyles because they improve aesthetics, support
+    well-being, and create a closer connection with nature. However, many buyers struggle to choose the right plant,
+    understand its care requirements, and maintain it successfully after purchase. General e-commerce websites usually
+    do not offer detailed plant-specific guidance or community-based support.
+  </p>
+  <p>
+    Leaf &amp; Bloom is developed as a specialized online plant store that offers a complete experience around plant
+    shopping and care. It helps users browse plants based on category, room suitability, lighting conditions, beginner
+    friendliness, and lifestyle preferences. In addition to shopping, the platform provides care guidance, a community
+    space, and a context-aware plant assistant to make the experience more helpful and personalized.
+  </p>
+
+  <h2>2. PROBLEM STATEMENT</h2>
+  <p>
+    Existing shopping platforms treat plants like ordinary products and often fail to support customers with practical
+    plant-care knowledge. Users may purchase plants without understanding light needs, watering frequency, humidity,
+    pet safety, or maintenance difficulty. This leads to poor plant survival, customer dissatisfaction, and a low level
+    of confidence among beginners. There is a need for a dedicated digital platform that combines plant shopping with
+    educational guidance and user interaction.
+  </p>
+
+  <h2>3. OBJECTIVES</h2>
+  <ul>
+    <li>To design a dedicated online platform for buying indoor and lifestyle plants.</li>
+    <li>To provide structured plant-specific guidance for beginners and regular plant owners.</li>
+    <li>To implement shopping features such as catalog browsing, wishlist, checkout, and order history.</li>
+    <li>To add a plant community where users can share experiences, images, and joy.</li>
+    <li>To offer a plant assistant that responds to care questions using plant-specific context.</li>
+    <li>To build an interface that is visually attractive, simple to navigate, and mobile friendly.</li>
+  </ul>
+
+  <h2>4. EXISTING SYSTEM</h2>
+  <p>
+    In the existing system, users normally rely on generic e-commerce platforms or scattered social media pages to buy
+    plants. Product information is often limited to names, prices, and a few images. Plant care support is inconsistent,
+    community interaction is disconnected from the buying process, and beginner guidance is rarely integrated into the
+    shopping flow. As a result, buyers often feel uncertain before and after purchase.
+  </p>
+
+  <h2>5. PROPOSED SYSTEM</h2>
+  <p>
+    The proposed system, Leaf &amp; Bloom, integrates plant shopping and support into one platform. It includes a rich
+    product catalog, category-based navigation, room-based browsing, reviews, wishlist management, checkout, and order
+    management. It also includes a care guide, a plant assistant for customized suggestions, and a community page for
+    shared learning and engagement. This makes the platform more useful than a standard storefront because it supports
+    both plant selection and plant success after purchase.
+  </p>
+
+  <div class="page-break"></div>
+
+  <h2>6. SYSTEM REQUIREMENTS</h2>
+  <h3>6.1 Hardware Requirements</h3>
+  <ul>
+    <li>Processor: Intel Core i3 or above</li>
+    <li>RAM: 4 GB or above</li>
+    <li>Storage: 20 GB free space</li>
+    <li>Internet connection for browser access and media loading</li>
+  </ul>
+
+  <h3>6.2 Software Requirements</h3>
+  <ul>
+    <li>Operating System: Windows 10/11</li>
+    <li>Frontend: React, Vite, HTML5, CSS3, JavaScript</li>
+    <li>Backend: Node.js, Express.js</li>
+    <li>Database: MongoDB</li>
+    <li>Code Editor: Visual Studio Code</li>
+    <li>Browser: Google Chrome / Microsoft Edge</li>
+  </ul>
+
+  <h2>7. SYSTEM DESIGN AND ARCHITECTURE</h2>
+  <p>
+    The system follows a client-server architecture. The React frontend handles user interaction, rendering, filtering,
+    and browsing experiences. The Express backend handles API requests and persists order and wishlist data in MongoDB.
+    Static and structured plant data is used to enrich the user experience with care guidance and category browsing.
+  </p>
+
+  <table>
+    <tr>
+      <th>Layer</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>Presentation Layer</td>
+      <td>React-based UI for catalog, plant details, login, wishlist, checkout, care guide, and community.</td>
+    </tr>
+    <tr>
+      <td>Application Layer</td>
+      <td>Business logic for filtering, sorting, review handling, assistant responses, and user interaction flows.</td>
+    </tr>
+    <tr>
+      <td>API Layer</td>
+      <td>Express routes for orders and wishlist management.</td>
+    </tr>
+    <tr>
+      <td>Data Layer</td>
+      <td>MongoDB collections for order data and wishlist items, plus structured plant data for product information.</td>
+    </tr>
+  </table>
+
+  <h2>8. MODULES DESCRIPTION</h2>
+  <h3>8.1 Authentication Module</h3>
+  <p>
+    This module provides Sign In and Sign Up pages for user entry into the system. It creates the basic onboarding flow
+    needed for a personalized shopping experience.
+  </p>
+
+  <h3>8.2 Plant Catalog Module</h3>
+  <p>
+    This module displays all plant products with filters such as size, light requirement, price range, difficulty, and
+    category. It supports search, sorting, plant collection counters, and category shortcuts such as low light, palms,
+    pet friendly, flowering plants, gift sets, succulents, and trailing plants.
+  </p>
+
+  <h3>8.3 Plant Details Module</h3>
+  <p>
+    Each plant has a dedicated page that presents detailed care information including watering, humidity, pet safety,
+    placement, soil type, temperature, and fertilizer needs. This module also supports related browsing and plant reviews.
+  </p>
+
+  <h3>8.4 Wishlist Module</h3>
+  <p>
+    Users can save plants they are interested in and revisit them later. This helps improve decision making and encourages
+    return visits to the platform.
+  </p>
+
+  <h3>8.5 Checkout and Orders Module</h3>
+  <p>
+    This module handles purchasing flow and stores order information through the backend. It allows users to place orders
+    and view their order history.
+  </p>
+
+  <h3>8.6 Care Guide Module</h3>
+  <p>
+    This module gives beginner-friendly advice on plant maintenance, including watering routines, light conditions,
+    common issues, and recovery tips for plant stress.
+  </p>
+
+  <h3>8.7 Plant Assistant Module</h3>
+  <p>
+    A chatbot-style assistant helps users understand how to care for specific plants. It responds with customized guidance
+    based on the active plant and structured plant data.
+  </p>
+
+  <h3>8.8 Community Module</h3>
+  <p>
+    Users can share their plant journeys, joy, experiences, and images through a community feed. This improves engagement
+    and creates a sense of belonging for plant lovers.
+  </p>
+
+  <div class="page-break"></div>
+
+  <h2>9. DATABASE DESIGN</h2>
+  <p>
+    MongoDB is used as the backend database for order placement and wishlist information. The data model is simple,
+    flexible, and suitable for storing product-related user actions.
+  </p>
+
+  <table>
+    <tr>
+      <th>Collection</th>
+      <th>Sample Fields</th>
+    </tr>
+    <tr>
+      <td>orders</td>
+      <td>customerName, phone, address, plantId, plantName, quantity, totalAmount, createdAt</td>
+    </tr>
+    <tr>
+      <td>wishlist-items</td>
+      <td>plantId, name, image, price, category, light, size</td>
+    </tr>
+  </table>
+
+  <p>
+    Additional structured plant data is maintained in the frontend to support care details, plant categories, and
+    assistant responses.
+  </p>
+
+  <h2>10. TESTING AND VALIDATION</h2>
+  <p>
+    The application was tested by running the frontend build, checking route rendering, validating UI flows, and verifying
+    backend connectivity. Product listing, search, filtering, wishlist behavior, assistant interaction, plant details,
+    and community posting were reviewed to ensure consistent user experience.
+  </p>
+
+  <table>
+    <tr>
+      <th>Test Case</th>
+      <th>Expected Result</th>
+      <th>Status</th>
+    </tr>
+    <tr>
+      <td>Open catalog</td>
+      <td>Plant listing loads with categories and filters</td>
+      <td>Pass</td>
+    </tr>
+    <tr>
+      <td>Add plant to wishlist</td>
+      <td>Selected plant appears in wishlist</td>
+      <td>Pass</td>
+    </tr>
+    <tr>
+      <td>Open plant detail page</td>
+      <td>Plant-specific data and care guidance are shown</td>
+      <td>Pass</td>
+    </tr>
+    <tr>
+      <td>Place order</td>
+      <td>Order data is stored and visible in orders page</td>
+      <td>Pass</td>
+    </tr>
+    <tr>
+      <td>Use plant assistant</td>
+      <td>Context-aware care guidance is returned</td>
+      <td>Pass</td>
+    </tr>
+    <tr>
+      <td>Create community post</td>
+      <td>Post with text and image appears in community feed</td>
+      <td>Pass</td>
+    </tr>
+  </table>
+
+  <h2>11. ADVANTAGES OF THE SYSTEM</h2>
+  <ul>
+    <li>Dedicated experience for plant shopping instead of generic e-commerce behavior.</li>
+    <li>Helpful for beginners through guided care content and plant assistant responses.</li>
+    <li>Improves user engagement with community interaction and reviews.</li>
+    <li>Supports easier product discovery through categories, room-based browsing, and filters.</li>
+    <li>Provides structured plant information that increases customer confidence.</li>
+  </ul>
+
+  <h2>12. APPLICATIONS</h2>
+  <ul>
+    <li>Online indoor plant shopping platforms</li>
+    <li>Nursery digital storefronts</li>
+    <li>Plant education and beginner care portals</li>
+    <li>Community platforms for hobby growers and home gardeners</li>
+  </ul>
+
+  <h2>13. FUTURE SCOPE</h2>
+  <ul>
+    <li>Admin dashboard for adding and editing plant inventory dynamically</li>
+    <li>Real user authentication and profile management</li>
+    <li>Online payment gateway integration</li>
+    <li>Shared backend-powered community feed and reviews</li>
+    <li>AI-powered disease diagnosis from uploaded plant images</li>
+    <li>Order tracking and delivery notifications</li>
+  </ul>
+
+  <h2>14. CONCLUSION</h2>
+  <p>
+    Leaf &amp; Bloom is a complete and user-friendly web application that brings together shopping, guidance, and
+    community for plant lovers. It solves the limitations of generic plant selling websites by offering meaningful
+    support before and after purchase. The project demonstrates how a focused digital experience can improve customer
+    confidence, simplify plant care for beginners, and create a stronger connection between users and the products they buy.
+  </p>
+  <p>
+    The system successfully combines modern frontend development, backend integration, structured product data, and
+    engaging user features. It can serve as a strong foundation for future expansion into a more advanced and scalable
+    plant commerce platform.
+  </p>
+
+  <h2>15. REFERENCES</h2>
+  <ul>
+    <li>React Documentation - https://react.dev/</li>
+    <li>Vite Documentation - https://vitejs.dev/</li>
+    <li>Node.js Documentation - https://nodejs.org/</li>
+    <li>Express.js Documentation - https://expressjs.com/</li>
+    <li>MongoDB Documentation - https://www.mongodb.com/docs/</li>
+    <li>MDN Web Docs - https://developer.mozilla.org/</li>
+  </ul>
+</body>
+</html>

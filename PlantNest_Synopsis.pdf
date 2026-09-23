@@ -1,0 +1,168 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 3 /Kids [ 4 0 R 6 0 R 8 0 R ] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 5 0 R >>
+endobj
+5 0 obj
+<< /Length 3869 >>
+stream
+BT
+/F1 12 Tf
+50 790 Td
+16 TL
+(PLANTNEST PROJECT SYNOPSIS) Tj
+T* () Tj
+T* (1. TITLE OF THE PROJECT) Tj
+T* (PlantNest: An Online Plant Store and Community Platform for Plant Lovers) Tj
+T* () Tj
+T* (2. INTRODUCTION) Tj
+T* (PlantNest is a web-based platform developed to help users discover, purchase, and learn to care for indoor and ornamental plants in a simple and engaging way. The project combines an online plant store, wishlist management, beginner care guidance, order tracking, and a community space where plant lovers can share their experiences and connect with one another. PlantNest is designed to make plant shopping more informative, interactive, and beginner friendly.) Tj
+T* () Tj
+T* (3. PROBLEM STATEMENT) Tj
+T* (Many people want to keep plants at home, but they often face difficulties in selecting suitable plants, understanding care requirements, and finding a reliable platform that offers both products and guidance. Most online shopping platforms focus only on selling plants and do not provide a complete experience that includes beginner support, plant care education, and community interaction. This creates confusion and reduces confidence among first-time buyers.) Tj
+T* () Tj
+T* (4. OBJECTIVES) Tj
+T* (The main objectives of PlantNest are:) Tj
+T* (- To provide an online platform for browsing and purchasing a variety of plants.) Tj
+T* (- To allow users to save favorite plants in a wishlist for future purchase.) Tj
+T* (- To help users place and track plant orders easily.) Tj
+T* (- To guide beginners with simple maintenance tips and plant care suggestions.) Tj
+T* (- To create a community page where plant lovers can share their plant journey, experiences, and joy.) Tj
+T* (- To deliver a responsive and visually appealing user interface for both desktop and mobile users.) Tj
+T* () Tj
+T* (5. SCOPE OF THE PROJECT) Tj
+T* (The scope of PlantNest includes product browsing, filtering, sorting, wishlist management, checkout, order tracking, beginner plant care guidance, and a community feature for user interaction. The project is focused on creating an easy-to-use and attractive experience for plant buyers and enthusiasts. It can be further extended into a larger e-commerce and social platform in future versions.) Tj
+T* () Tj
+T* (6. EXISTING SYSTEM) Tj
+T* (In the existing system, many online stores only provide product listings and payment options. Users usually have to search other websites or social media pages to understand plant care instructions or to communicate with fellow plant lovers. This separation of shopping, learning, and interaction makes the overall process inconvenient.) Tj
+T* () Tj
+T* (7. PROPOSED SYSTEM) Tj
+T* (The proposed system, PlantNest, integrates plant shopping, care guidance, and community interaction into one platform. Users can view plant categories, filter by size, light, and price, sort items as needed, add plants to a wishlist, place orders, and get basic beginner-friendly care guidance. The community feature allows users to share plant updates and connect with others who enjoy growing plants.) Tj
+T* () Tj
+T* (8. MODULES OF THE PROJECT) Tj
+T* (The major modules of PlantNest are:) Tj
+T* () Tj
+T* (8.1 Plant Catalog Module) Tj
+T* (Displays a variety of plants with details such as name, category, light requirement, size, price, and description.) Tj
+T* () Tj
+T* (8.2 Search, Filter, and Sort Module) Tj
+T* (Allows users to search plants by name or category and filter them by size, light requirement, and price range. Sorting options help users browse plants more efficiently.) Tj
+T* () Tj
+T* (8.3 Wishlist Module) Tj
+T* (Enables users to save favorite plants for future purchase and manage their saved collection.) Tj
+T* () Tj
+T* (8.4 Checkout and Order Module) Tj
+T* (Allows users to enter delivery details, select payment methods, place orders, and view order history.) Tj
+T* () Tj
+ET
+
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 7 0 R >>
+endobj
+7 0 obj
+<< /Length 2141 >>
+stream
+BT
+/F1 12 Tf
+50 790 Td
+16 TL
+(8.5 Plant Care Guide Module) Tj
+T* (Provides beginner-friendly guidance on watering, lighting, common plant problems, and simple maintenance practices.) Tj
+T* () Tj
+T* (8.6 Community Module) Tj
+T* (Offers a dedicated space where plant lovers can post updates, share their plant journey, and interact through a simple feed.) Tj
+T* () Tj
+T* (8.7 Authentication Module) Tj
+T* (Provides basic sign-up and sign-in functionality for personalized usage.) Tj
+T* () Tj
+T* (9. TECHNOLOGIES USED) Tj
+T* (Frontend:) Tj
+T* (- React.js) Tj
+T* (- React Router) Tj
+T* (- CSS) Tj
+T* (- React Icons) Tj
+T* () Tj
+T* (Backend:) Tj
+T* (- Node.js) Tj
+T* (- Express.js) Tj
+T* () Tj
+T* (Database:) Tj
+T* (- MongoDB) Tj
+T* (- Mongoose) Tj
+T* () Tj
+T* (Other Tools:) Tj
+T* (- Axios) Tj
+T* (- Vite) Tj
+T* () Tj
+T* (10. SYSTEM WORKING) Tj
+T* (The user opens the PlantNest application and browses the available plants. Using search, filters, and sorting options, the user can quickly find suitable plants. The user can add plants to the wishlist or buy them directly through the checkout page. The order is then stored and displayed in the orders section. Users can also access the plant care guide to understand basic maintenance steps. In addition, users can visit the community page to share updates and interact with other plant lovers.) Tj
+T* () Tj
+T* (11. ADVANTAGES OF THE PROJECT) Tj
+T* (- User friendly and visually engaging interface.) Tj
+T* (- Combines shopping, learning, and community interaction in one platform.) Tj
+T* (- Beginner-friendly guidance for plant maintenance.) Tj
+T* (- Organized browsing with filters and sorting features.) Tj
+T* (- Encourages engagement and emotional connection through the community space.) Tj
+T* () Tj
+T* (12. LIMITATIONS) Tj
+T* (- The current authentication system is basic and can be improved.) Tj
+T* (- The community feature currently uses lightweight local storage behavior and can be extended with shared database support.) Tj
+T* (- Online payment gateway integration is not fully implemented.) Tj
+T* (- Admin management features are not included in the current version.) Tj
+T* () Tj
+ET
+
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 9 0 R >>
+endobj
+9 0 obj
+<< /Length 1072 >>
+stream
+BT
+/F1 12 Tf
+50 790 Td
+16 TL
+(13. FUTURE ENHANCEMENTS) Tj
+T* (- Add secure user authentication and authorization.) Tj
+T* (- Implement real-time community chat and commenting.) Tj
+T* (- Add admin dashboard for managing plants, users, and orders.) Tj
+T* (- Integrate online payment gateways.) Tj
+T* (- Add image upload support for community posts.) Tj
+T* (- Add recommendation features based on plant care level and user interest.) Tj
+T* (- Enable shared community posts using backend database storage.) Tj
+T* () Tj
+T* (14. CONCLUSION) Tj
+T* (PlantNest is a practical and modern web application that goes beyond a normal plant store by creating a complete ecosystem for plant lovers. It combines e-commerce, education, and community engagement in one platform. The project is especially useful for beginners who need support in selecting and maintaining plants, while also providing an enjoyable space for experienced plant enthusiasts to share their journey. PlantNest demonstrates how technology can be used to build a meaningful, user-centered digital experience.) Tj
+ET
+
+endstream
+endobj
+xref
+0 10
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000129 00000 n 
+0000000199 00000 n 
+0000000325 00000 n 
+0000004246 00000 n 
+0000004372 00000 n 
+0000006565 00000 n 
+0000006691 00000 n 
+trailer
+<< /Size 10 /Root 1 0 R >>
+startxref
+7815
+%%EOF
