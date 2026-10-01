@@ -2393,3 +2393,439 @@ form input:focus {
     justify-content: center;
   }
 }
+
+/* =========================
+   MY GARDEN
+   ========================= */
+
+.garden-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+  width: 100%;
+  margin-top: 28px;
+}
+
+.garden-card {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(48, 103, 76, 0.12);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 14px 35px rgba(40, 70, 50, 0.08);
+}
+
+.garden-plant-image {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  object-fit: cover;
+}
+
+.garden-card-content {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.garden-title-row h2 {
+  margin: 4px 0 0;
+}
+
+.garden-info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.garden-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 13px;
+  border-radius: 14px;
+  background: rgba(230, 240, 226, 0.65);
+}
+
+.garden-info svg {
+  margin-top: 3px;
+}
+
+.garden-info div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.garden-info strong {
+  font-size: 0.85rem;
+}
+
+.garden-info span {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.garden-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+  .garden-card {
+    grid-template-columns: 1fr;
+  }
+
+  .garden-plant-image {
+    height: 280px;
+    min-height: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .garden-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .garden-card-content {
+    padding: 20px;
+  }
+}
+
+/* =========================
+   WATERING PANEL
+   ========================= */
+
+.watering-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 20px;
+  margin-top: 4px;
+  border-radius: 18px;
+  background: #f1f7ee;
+  border: 1px solid rgba(48, 103, 76, 0.12);
+}
+
+.watering-panel strong {
+  display: block;
+  color: #245f46;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+.watering-panel p {
+  margin: 0;
+  color: #5c7769;
+  font-size: 0.9rem;
+}
+
+.watering-panel p svg {
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.watering-panel button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 18px;
+  background: #286b4d;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.watering-panel button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(40, 107, 77, 0.2);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .watering-panel {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .watering-panel button {
+    width: 100%;
+  }
+}
+
+/* =========================
+   PLANT STATUS
+   ========================= */
+
+.plant-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  width: fit-content;
+  margin: 4px 0 14px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #e8f5e9;
+  color: #286b4d;
+  border: 1px solid rgba(40, 107, 77, 0.14);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.status-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #3f8f63;
+  box-shadow: 0 0 0 4px rgba(63, 143, 99, 0.12);
+}
+
+/* =========================
+   GARDEN SUMMARY
+   ========================= */
+
+.garden-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 24px 0 30px;
+}
+
+.garden-summary-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(48, 103, 76, 0.12);
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(40, 70, 50, 0.06);
+}
+
+.garden-summary-icon {
+  font-size: 1.7rem;
+}
+
+.garden-summary-card div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.garden-summary-card strong {
+  font-size: 1.5rem;
+  color: #286b4d;
+}
+
+.garden-summary-card span:last-child {
+  color: #60786b;
+  font-size: 0.9rem;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .garden-summary {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   REMINDER CONTROL
+   ========================= */
+
+.reminder-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.reminder-control label {
+  color: #286b4d;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.reminder-control select {
+  border: 1px solid rgba(40, 107, 77, 0.2);
+  border-radius: 10px;
+  padding: 9px 12px;
+  background: white;
+  color: #286b4d;
+  font-size: 0.9rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.reminder-control select:focus {
+  border-color: #286b4d;
+  box-shadow: 0 0 0 3px rgba(40, 107, 77, 0.1);
+}
+
+@media (max-width: 700px) {
+  .reminder-control {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .reminder-control select {
+    width: 100%;
+  }
+}
+
+/* =========================
+   FIND MY PLANT - RESULTS
+   ========================= */
+
+.finder-submit {
+  margin-top: 24px;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 12px;
+  background: #287653;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.finder-submit:hover {
+  transform: translateY(-2px);
+}
+
+.finder-results {
+  margin-top: 40px;
+}
+
+/* Recommendation cards */
+.finder-results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 28px;
+}
+
+.finder-result-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(40, 118, 83, 0.12);
+  box-shadow: 0 12px 30px rgba(40, 80, 55, 0.08);
+}
+
+/* IMPORTANT: prevents the image from becoming huge */
+.finder-result-card img {
+  display: block;
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.finder-result-content {
+  padding: 20px;
+}
+
+.finder-result-content h3 {
+  margin: 6px 0 10px;
+  font-size: 1.3rem;
+}
+
+.finder-result-content p {
+  margin: 0 0 16px;
+}
+
+.finder-result-content button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  background: #287653;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .finder-results-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .finder-result-card img {
+    height: 220px;
+  }
+}
+
+/* =========================
+   PLANT FINDER OPTIONS
+   ========================= */
+
+.finder-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.finder-option {
+  border: 1px solid rgba(38, 112, 78, 0.25);
+  background: rgba(255, 255, 255, 0.8);
+  color: #185f43;
+  padding: 12px 20px;
+  border-radius: 14px;
+  font-size: 16px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Hover */
+.finder-option:hover {
+  background: #e7f4e9;
+  border-color: #2f7d59;
+  transform: translateY(-2px);
+}
+
+/* Selected option */
+.finder-option.active {
+  background: #267653;
+  color: white;
+  border-color: #267653;
+  box-shadow: 0 8px 18px rgba(38, 118, 83, 0.2);
+  transform: translateY(-1px);
+}
+
+/* Keep selected button looking active when hovering */
+.finder-option.active:hover {
+  background: #1f6849;
+  color: white;
+}
+
+/* Find My Plants button */
+.finder-submit {
+  margin-top: 30px;
+}
+
+.finder-match-badge {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin: 16px 16px 0;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: #e7f4e9;
+  color: #267653;
+  font-size: 13px;
+  font-weight: 700;
+}

@@ -22,6 +22,7 @@ function PlantDetails() {
   const navigate = useNavigate();
   const [wishlist, setWishlist] = useState([]);
 
+  const [garden, setGarden] = useState([]);
   const plant = useMemo(() => plants.find((item) => item.id === plantId), [plantId]);
 
   useEffect(() => {
@@ -34,6 +35,15 @@ function PlantDetails() {
     }
   }, []);
 
+  useEffect(() => {
+  try {
+    const savedGarden = JSON.parse(localStorage.getItem("my-garden")) || [];
+    setGarden(savedGarden);
+  } catch {
+    localStorage.removeItem("my-garden");
+    setGarden([]);
+  }
+}, []);
   useEffect(() => {
     if (plant) {
       setActivePlant(plant);
@@ -78,6 +88,21 @@ function PlantDetails() {
     return wishlist.some((savedPlant) => savedPlant.id === id);
   }
 
+  function addToGarden(item) {
+  const exists = garden.some((savedPlant) => savedPlant.id === item.id);
+
+  if (exists) {
+    navigate("/my-garden");
+    return;
+  }
+
+  const updatedGarden = [...garden, item];
+
+  setGarden(updatedGarden);
+  localStorage.setItem("my-garden", JSON.stringify(updatedGarden));
+
+  navigate("/my-garden");
+}
   return (
     <div className="page-shell detail-page">
       <section className="detail-hero">
@@ -124,6 +149,15 @@ function PlantDetails() {
               >
                 <FaHeart />
                 {isWishlisted(plant.id) ? "Saved" : "Save to Wishlist"}
+              </button>
+
+              <button
+                type="button"
+                className="detail-wishlist-btn"
+                onClick={() => addToGarden(plant)}
+              >
+                <FaLeaf />
+                Add to My Garden
               </button>
             </div>
           </div>

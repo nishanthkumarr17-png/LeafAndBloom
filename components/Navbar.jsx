@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaBookOpen, FaComments, FaHome, FaShoppingCart, FaUser } from "react-icons/fa";
+import { FaBookOpen, FaComments, FaHome,FaLeaf, FaShoppingCart, FaUser } from "react-icons/fa";
 
 function Navbar({ showDropdown, onToggleDropdown, onLogout, username }) {
   return (
@@ -15,6 +15,14 @@ function Navbar({ showDropdown, onToggleDropdown, onLogout, username }) {
         <Link to="/">
           <span><FaHome style={{ marginRight: "4px" }} /></span>
           Plants
+        </Link>
+        <Link to="/my-garden">
+         <span><FaLeaf style={{ marginRight: "4px" }} /></span>
+          My Garden
+        </Link>
+        <Link to="/plant-finder">
+          <span><FaLeaf style={{ marginRight: "4px" }} /></span>
+          Find My Plant
         </Link>
         <Link to="/wishlist">Wishlist</Link>
         <Link to="/orders">

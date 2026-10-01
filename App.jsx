@@ -5,12 +5,14 @@ import SignUp from "./SignUp.jsx";
 import SignIn from "./SignIn.jsx";
 import Plants from "./Plants.jsx";
 import Wishlist from "./Wishlist.jsx";
+import MyGarden from "./MyGarden.jsx";
 import PlantOrders from "./PlantOrders.jsx";
 import PlantCheckout from "./PlantCheckout.jsx";
 import Community from "./Community.jsx";
 import CareGuide from "./CareGuide.jsx";
 import PlantAssistant from "./PlantAssistant.jsx";
 import PlantDetails from "./PlantDetails.jsx";
+import PlantFinder from "./PlantFinder.jsx";
 import Navbar from "./components/Navbar.jsx";
 
 function App() {
@@ -38,6 +40,8 @@ function App() {
           <Route path="/signin" element={<SignIn />} />
           <Route path="/plants" element={<Plants />} />
           <Route path="/plants/:plantId" element={<PlantDetails />} />
+          <Route path="/my-garden" element={<MyGarden />} />
+          <Route path="/plant-finder" element={<PlantFinder />} />
           <Route path="/wishlist" element={<Wishlist />} />
           <Route path="/orders" element={<PlantOrders />} />
           <Route path="/checkout" element={<PlantCheckout />} />
