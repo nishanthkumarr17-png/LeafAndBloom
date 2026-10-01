@@ -80,7 +80,6 @@ function PlantFinder() {
 
   setShowResults(true);
 }
-  }
 
   return (
     <div className="page-shell">
