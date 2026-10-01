@@ -283,6 +283,6 @@ function PlantFinder() {
       )}
     </div>
   );
-
+}
 
 export default PlantFinder;
