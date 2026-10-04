@@ -24,6 +24,12 @@ function Navbar({ showDropdown, onToggleDropdown, onLogout, username }) {
           <span><FaLeaf style={{ marginRight: "4px" }} /></span>
           Find My Plant
         </Link>
+        <Link to="/plant-sos">
+        <span>
+        <FaLeaf style={{ marginRight: "4px" }} />
+        </span>
+          Plant SOS
+        </Link>
         <Link to="/wishlist">Wishlist</Link>
         <Link to="/orders">
           <span><FaShoppingCart style={{ marginRight: "4px" }} /></span>

@@ -14,6 +14,7 @@ import PlantAssistant from "./PlantAssistant.jsx";
 import PlantDetails from "./PlantDetails.jsx";
 import PlantFinder from "./PlantFinder.jsx";
 import Navbar from "./components/Navbar.jsx";
+import PlantSOS from "./PlantSOS.jsx";
 
 function App() {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -48,6 +49,7 @@ function App() {
           <Route path="/community" element={<Community />} />
           <Route path="/care-guide" element={<CareGuide />} />
           <Route path="/" element={<Plants />} />
+          <Route path="/plant-sos" element={<PlantSOS />} />
         </Routes>
 
         <footer className="site-footer">
