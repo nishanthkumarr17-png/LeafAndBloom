@@ -3036,3 +3036,10 @@ form input:focus {
     height: 48px;
   }
 }
+
+.next-watering-date {
+  margin: 8px 0 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #287653;
+}

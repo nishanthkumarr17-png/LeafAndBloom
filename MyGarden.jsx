@@ -116,6 +116,20 @@ function getPlantStatus(id) {
     JSON.stringify(updatedReminders)
   );
 }
+function getNextWateringDate(id) {
+  const days = reminderDays[id];
+
+  if (!days) return null;
+
+  const date = new Date();
+  date.setDate(date.getDate() + Number(days));
+
+  return date.toLocaleDateString("en-IN", {
+    day: "numeric",
+    month: "short",
+    year: "numeric"
+  });
+}
 
   return (
     <div className="page-shell">
@@ -302,7 +316,14 @@ function getPlantStatus(id) {
     <option value="3">In 3 days</option>
     <option value="5">In 5 days</option>
     <option value="7">In 7 days</option>
-  </select>
+ </select>
+
+    {reminderDays[plant.id] && (
+     <p className="next-watering-date">
+    🔔 Next watering: {getNextWateringDate(plant.id)}
+    </p>
+)}
+
 </div>
 
                   <button
