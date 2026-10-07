@@ -55,7 +55,7 @@ function PlantCheckout() {
 
   function placeOrder() {
     axios
-      .post("http://localhost:9001/orders", {
+      .post("https://leafandbloom.onrender.com/orders", {
         ...form,
         payment: paymentMode,
         title: plant.name,

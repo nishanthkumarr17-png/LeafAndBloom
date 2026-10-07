@@ -17,7 +17,7 @@ app.use(cors());
 app.use(express.json());
 
 mongoose
-  .connect("mongodb://localhost:27017/plantdb")
+  .connect(process.env.MONGODB_URI)
   .then((isConnected) => {
     if (isConnected) {
       console.log("DB Connected");

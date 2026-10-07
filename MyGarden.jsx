@@ -178,7 +178,7 @@ async function savePushReminder(plant, days) {
       .split("T")[0];
 
     const response = await fetch(
-      "http://localhost:9001/api/plant-reminder",
+      "https://leafandbloom.onrender.com/api/plant-reminder",
       {
         method: "POST",
         headers: {
@@ -249,7 +249,7 @@ async function subscribeToPushNotifications() {
   try {
     const registration = await navigator.serviceWorker.ready;
 
-    const response = await fetch("http://localhost:9001/api/push/public-key");
+    const response = await fetch("https://leafandbloom.onrender.com/api/push/public-key");
     const data = await response.json();
 
     const subscription = await registration.pushManager.subscribe({
@@ -257,7 +257,7 @@ async function subscribeToPushNotifications() {
       applicationServerKey: urlBase64ToUint8Array(data.publicKey),
     });
 
-    await fetch("http://localhost:9001/api/push/subscribe", {
+    await fetch("https://leafandbloom.onrender.com/api/push/subscribe", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

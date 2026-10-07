@@ -9,7 +9,7 @@ function PlantOrders() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:9001/orders")
+      .get("https://leafandbloom.onrender.com/orders")
       .then((res) => setOrders(res.data || []))
       .catch((err) => console.log(err));
   }, []);
