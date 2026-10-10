@@ -501,7 +501,12 @@ function Plants() {
                 key={collection.title}
                 type="button"
                 className="category-card"
-                onClick={() => setSearch(collection.searchValue)}
+                onClick={() => {
+                 setSearch(collection.title === "Pet Friendly" ? "pet-friendly-only" : collection.searchValue);
+                 setSelectedSize("All");
+                 setSelectedLight("All");
+                 setSelectedPriceRange("All");
+}}
               >
                 <Icon />
                 <strong>{collection.title}</strong>
