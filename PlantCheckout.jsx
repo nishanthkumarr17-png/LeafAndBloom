@@ -67,11 +67,16 @@ function PlantCheckout() {
         image: plant.image,
         date: new Date().toLocaleDateString()
       })
-      .then(() => {
-        alert("Plant order placed successfully");
-        navigate("/orders");
-      })
-      .catch((err) => console.log(err));
+      
+        .then(() => {
+         window.alert("🌿 Plant order placed successfully!");
+         navigate("/orders");
+         })
+     .catch((err) => {
+     console.error("Failed to place order:", err);
+     window.alert("Unable to place your order. Please try again.");
+});
+
   }
 
   return (
