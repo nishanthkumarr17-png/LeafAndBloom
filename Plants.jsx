@@ -116,7 +116,7 @@ function Plants() {
     {
       title: "Pet Friendly",
       description: "Safer homes with cats and dogs.",
-      searchValue: "pet safe",
+      searchValue: "pet-friendly-only",
       icon: FaPaw
     },
     {
@@ -339,14 +339,17 @@ function Plants() {
   const filteredPlants = useMemo(() => {
     const nextPlants = plants.filter((item) => {
       const term = search.toLowerCase();
-      const matchesSearch =
-        item.name.toLowerCase().includes(term) ||
-        item.category.toLowerCase().includes(term) ||
-        item.light.toLowerCase().includes(term) ||
-        item.petSafety.toLowerCase().includes(term) ||
-        item.difficulty.toLowerCase().includes(term) ||
-        item.placement.toLowerCase().includes(term);
-
+     const matchesSearch =
+     term === "pet-friendly-only"
+    ? item.petSafety.toLowerCase().includes("pet safe") &&
+      !item.petSafety.toLowerCase().includes("not pet safe")
+    : !term ||
+      item.name.toLowerCase().includes(term) ||
+      item.category.toLowerCase().includes(term) ||
+      item.light.toLowerCase().includes(term) ||
+      item.petSafety.toLowerCase().includes(term) ||
+      item.difficulty.toLowerCase().includes(term) ||
+      item.placement.toLowerCase().includes(term);
       const matchesSize = selectedSize === "All" || item.size === selectedSize;
       const matchesLight = selectedLight === "All" || item.light === selectedLight;
       const matchesPrice = matchesPriceRange(item.price);
