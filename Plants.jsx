@@ -341,7 +341,7 @@ function Plants() {
       const term = search.toLowerCase();
      
       const matchesSearch =
-      term === "pet-friendly-only"
+  term === "pet-friendly-only"
     ? item.petSafety.toLowerCase().includes("pet safe") &&
       !item.petSafety.toLowerCase().includes("not pet safe")
     : !term ||
@@ -351,7 +351,7 @@ function Plants() {
       item.petSafety.toLowerCase().includes(term) ||
       item.difficulty.toLowerCase().includes(term) ||
       item.placement.toLowerCase().includes(term);
-
+      
       const matchesSize = selectedSize === "All" || item.size === selectedSize;
       const matchesLight = selectedLight === "All" || item.light === selectedLight;
       const matchesPrice = matchesPriceRange(item.price);
